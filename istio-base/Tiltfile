@@ -7,8 +7,3 @@ local_resource(name = 'istio-ns',
     cmd = 'kubectl get namespace | grep -q "^istio-system" || kubectl create namespace istio-system',
     labels = ["istio"]
 )
-local_resource(name = 'istio-base-app-manifest', 
-    cmd = 'kubectl apply -f local/minikube/application.yml',
-    resource_deps = ["istio-ns", "argocd-server", "argocd-application-controller", "argocd-repo-server"],
-    labels = ["istio"]
-) 

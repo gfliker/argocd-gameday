@@ -2,9 +2,3 @@ if k8s_context() not in ('minikube', 'docker-desktop'):
   fail("K8s context is not minikube or docker-desktop")
 
 allow_k8s_contexts(contexts = ["minikube"])
-
-local_resource(name = 'istiod-app-manifest', 
-    cmd = 'kubectl apply -f local/minikube/application.yml',
-    resource_deps = ["istio-ns", "istio-base-app-manifest", "argocd-server", "argocd-application-controller", "argocd-repo-server"],
-    labels = ["istio"]
-)  

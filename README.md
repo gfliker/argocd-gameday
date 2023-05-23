@@ -36,3 +36,6 @@ This application needs to be managed by the Application of Applications before p
 
 ## Activity #4 - Upgrade ArgoCD
 Currently, ArgoCD is sitting on version `2.5.4`. Engineers should examine existing patterns and upgrade ArgoCD to version `2.7.2`.
+
+## Activity #5 - Fix External Secrets
+The objective of this activity is to resolve a broken application - external-secrets. This application should reside within the ArgoCD Application Project `external-secrets`

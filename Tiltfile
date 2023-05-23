@@ -18,6 +18,7 @@ groups = {
     "app-of-apps": [
         "apps",
         "argo-rollouts",
+        "external-secrets",
         "istio-base",
         "istio-istiod"
     ],

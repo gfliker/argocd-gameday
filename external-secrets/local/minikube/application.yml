@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-secrets
+  namespace: argo-cd
+spec:
+  project: external-secrets
+  source:
+    repoURL: https://charts.external-secrets.io
+    targetRevision: "1.8.2"
+    chart: external-secrets
+    helm:
+      values: |
+        resources:
+          requests:
+            cpu: 3m
+            memory: 40Mi
+          limits:
+            memory: 160Mi
+      parameters:
+        - name: installCRDs
+          value: "true"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: external-secrets
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

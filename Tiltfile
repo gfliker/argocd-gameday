@@ -17,7 +17,9 @@ groups = {
     ],
     "app-of-apps": [
         "apps",
-        "argo-rollouts"
+        "argo-rollouts",
+        "istio-base",
+        "istio-istiod"
     ],
     "argo": [
         "argo-rollouts"

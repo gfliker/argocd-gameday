@@ -2,6 +2,7 @@ resources:
   - github.com/argoproj/argo-cd//manifests/crds?ref=v2.5.4
   - github.com/argoproj/argo-cd//manifests/cluster-rbac?ref=v2.5.4
   - github.com/argoproj/argo-cd//manifests/base?ref=v2.5.4
+  - projects/sample.yml
   - secret/repo-k8s-local-tilt.yml
 
 patchesStrategicMerge:

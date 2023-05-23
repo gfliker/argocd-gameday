@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-istiod
+  namespace: argo-cd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jmmclean/argocd-gameday.git
+    targetRevision: main
+    path: istio-istiod/local/minikube
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: istio-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

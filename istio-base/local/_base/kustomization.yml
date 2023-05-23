@@ -1,0 +1,12 @@
+helmCharts:
+  - name: base
+    repo: https://istio-release.storage.googleapis.com/charts
+    version: "1.16.0"
+    namespace: istio-system
+    releaseName: istio-base
+    valuesInline:
+      base:
+        enableCRDTemplates: true
+      defaultRevision: ""
+
+namespace: istio-system

@@ -1,0 +1,10 @@
+if k8s_context() != 'minikube':
+  fail("K8s context is not minikube")
+
+allow_k8s_contexts(contexts = ["minikube"])
+
+local_resource(name = 'app-of-apps-app-manifest', 
+    cmd = 'kubectl apply -f local/minikube/application.yml',
+    resource_deps = ["argocd-server", "argocd-application-controller", "argocd-repo-server"],
+    labels = ["app-of-apps"]
+)   

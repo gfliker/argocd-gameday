@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argo-cd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jmmclean/argocd-gameday.git
+    targetRevision: main
+    path: apps/local/minikube
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argo-cd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

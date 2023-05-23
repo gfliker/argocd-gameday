@@ -1,0 +1,3 @@
+resources:
+  - ../../../argo-cd/local/minikube/application.yml
+  - ../../../argo-rollouts/local/minikube/application.yml

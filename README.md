@@ -2,7 +2,7 @@
 This repository is intended for training purposes with ArgoCD
 
 ## Activity #1 - Setup
-Users should fork this repo and set it up so that ArgoCD is referencing their fork and NOT this repo (ie `jmmclean/argocd-gameday`). 
+Users should fork this repo and set it up so that ArgoCD is referencing their fork and NOT this repo (ie `gfliker/argocd-gameday`). 
 
 To start a local environment, engineers should first install minikube and start it using the below command (or similar):
 ```shell

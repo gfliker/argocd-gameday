@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/jmmclean/argocd-gameday.git
+    repoURL: https://github.com/gfliker/argocd-gameday.git
     targetRevision: main
     path: argo-rollouts/local/minikube
   destination:

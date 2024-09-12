@@ -13,4 +13,4 @@ spec:
     - group: '*'
       kind: '*'
   sourceRepos:
-    - https://github.com/jmmclean/argocd-gameday
+    - https://github.com/gfliker/argocd-gameday

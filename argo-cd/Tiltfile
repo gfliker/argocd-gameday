@@ -31,7 +31,7 @@ local_resource(name = 'admin-secret',
 #         && kubectl create secret generic repo-creds -n argo-cd --dry-run=client -o yaml \
 #             --from-literal password=$GITHUB_TOKEN \
 #             --from-literal type=git \
-#             --from-literal url=https://github.com/jmmclean | kubectl apply -f - \
+#             --from-literal url=https://github.com/gfliker | kubectl apply -f - \
 #         && kubectl label secret repo-creds argocd.argoproj.io/secret-type=repo-creds -n argo-cd --overwrite=true',
 #     resource_deps = ["argo-cd-ns"],
 #     labels = ["argo-cd"]
